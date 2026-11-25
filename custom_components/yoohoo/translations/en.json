@@ -1,0 +1,83 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect Yoohoo",
+        "description": "In the Yoohoo app, open Add a source, pick Home Assistant and copy the link it shows.",
+        "data": {
+          "url": "Link"
+        },
+        "data_description": {
+          "url": "The private link from your Home Assistant source in Yoohoo."
+        }
+      }
+    },
+    "error": {
+      "invalid_link": "That doesn't look like a Yoohoo link. Copy it again from the Home Assistant source in the Yoohoo app.",
+      "link_gone": "Yoohoo doesn't know this link. The source may have been deleted, or a new link made. Copy the current one from the app.",
+      "cannot_connect": "Couldn't reach Yoohoo. Check that Home Assistant is online and try again."
+    },
+    "abort": {
+      "already_configured": "This link is already set up."
+    }
+  },
+  "services": {
+    "send_alert": {
+      "name": "Send alert",
+      "description": "Sends an alert to Yoohoo. The level decides whether it reaches you now or waits for your roundup.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Yoohoo source",
+          "description": "Which Yoohoo source to send to. Only needed when you've set up more than one."
+        },
+        "title": {
+          "name": "Title",
+          "description": "The alert's headline."
+        },
+        "message": {
+          "name": "Message",
+          "description": "More detail, shown under the title."
+        },
+        "level": {
+          "name": "Level",
+          "description": "When you hear about it."
+        },
+        "group": {
+          "name": "Group",
+          "description": "Keeps related alerts together. An All good alert settles earlier problems in the same group."
+        },
+        "url": {
+          "name": "Link",
+          "description": "A page to open from the alert."
+        }
+      }
+    }
+  },
+  "selector": {
+    "level": {
+      "options": {
+        "roundup": "For the roundup",
+        "needs_me": "Needs me",
+        "wrong": "Something is wrong",
+        "all_good": "All good"
+      }
+    }
+  },
+  "exceptions": {
+    "entry_not_found": {
+      "message": "That Yoohoo source isn't set up, or isn't running."
+    },
+    "not_set_up": {
+      "message": "Yoohoo isn't set up yet. Add it under Settings, Devices & services."
+    },
+    "pick_entry": {
+      "message": "You have more than one Yoohoo source. Pick which one to send to."
+    }
+  },
+  "issues": {
+    "link_gone": {
+      "title": "Yoohoo link stopped working",
+      "description": "Yoohoo no longer knows the link this integration sends to. The source may have been deleted, or a new link made. Remove the Yoohoo integration and add it again with the link from the Yoohoo app."
+    }
+  }
+}

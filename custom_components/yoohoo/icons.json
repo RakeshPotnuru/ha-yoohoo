@@ -1,0 +1,7 @@
+{
+  "services": {
+    "send_alert": {
+      "service": "mdi:bell-ring-outline"
+    }
+  }
+}

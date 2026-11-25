@@ -1,0 +1,33 @@
+send_alert:
+  fields:
+    config_entry_id:
+      selector:
+        config_entry:
+          integration: yoohoo
+    title:
+      required: true
+      example: Washer is done
+      selector:
+        text:
+    message:
+      selector:
+        text:
+          multiline: true
+    level:
+      default: roundup
+      selector:
+        select:
+          translation_key: level
+          options:
+            - roundup
+            - needs_me
+            - wrong
+            - all_good
+    group:
+      example: washer
+      selector:
+        text:
+    url:
+      selector:
+        text:
+          type: url
