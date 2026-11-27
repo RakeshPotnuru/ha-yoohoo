@@ -9,10 +9,9 @@ A door left open buzzes you now. The washer finishing, a low battery or the bins
 You need the Yoohoo app ([iPhone, Android or web](https://yoohoo.buzz/download?ref=hacs)), [HACS](https://hacs.xyz) and Home Assistant 2026.3 or newer.
 
 1. In the Yoohoo app, open **Add a source**, pick **Home Assistant** and copy the link.
-2. In Home Assistant, open HACS. Open the **⋮** menu at the top right and pick **Custom repositories**. Paste `https://github.com/RakeshPotnuru/ha-yoohoo`, choose **Integration** as the type, and tap **Add**.
-3. Search HACS for **Yoohoo** and download it. Restart Home Assistant.
-4. Go to **Settings**, then **Devices & services**, then **Add integration**, and pick **Yoohoo**.
-5. Paste the link. A "Home Assistant connected" alert shows up in Yoohoo.
+2. In Home Assistant, open HACS, search for **Yoohoo** and download it. Restart Home Assistant.
+3. Go to **Settings**, then **Devices & services**, then **Add integration**, and pick **Yoohoo**.
+4. Paste the link. A "Home Assistant connected" alert shows up in Yoohoo.
 
 ## Send an alert
 
